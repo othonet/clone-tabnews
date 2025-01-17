@@ -26,6 +26,7 @@ export default async function migrations(request, response) {
       dryRun: false,
     });
 
+    //Encerra a conexão com o Banco de dados.
     await dbClient.end();
 
     if (migratedMigrations.length > 0) {
